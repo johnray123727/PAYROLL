@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payroll Input</title>
+  <link rel="stylesheet" href="styyle.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💼 Payroll Management System</h1>
+    <form id="payrollForm">
+      <div class="form-group">
+        <label for="employeeName">Employee Name:</label>
+        <input type="text" id="employeeName" required minlength="2" maxlength="50" placeholder="Enter full name">
+        <div class="error-message" id="nameError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="rate">Daily Rate (₱):</label>
+        <input type="number" id="rate" required min="1" max="100000" step="0.01" placeholder="Enter daily rate">
+        <div class="error-message" id="rateError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="daysWorked">Days Worked:</label>
+        <input type="number" id="daysWorked" required min="1" max="31" step="0.5" placeholder="Enter days worked">
+        <div class="error-message" id="daysError"></div>
+      </div>
+
+      <button type="submit">💰 Compute Payroll</button>
+      <div class="success-message" id="successMessage"></div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

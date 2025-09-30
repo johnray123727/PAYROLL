@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  background-color: #fff;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  font-weight: 300;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+input:focus {
+  outline: none;
+  border-color: #667eea;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+input:invalid {
+  border-color: #e74c3c;
+}
+
+button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#result {
+  font-size: 16px;
+  line-height: 1.8;
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  margin: 20px 0;
+}
+
+.payroll-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.payroll-item:last-child {
+  border-bottom: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #2c3e50;
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 2px solid #667eea;
+}
+
+.payroll-item strong {
+  color: #34495e;
+}
+
+.back-btn {
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px 24px;
+  text-decoration: none;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.back-btn:hover {
+  background-color: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.print-btn {
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 12px 24px;
+  text-decoration: none;
+  color: #27ae60;
+  border: 2px solid #27ae60;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.print-btn:hover {
+  background-color: #27ae60;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+.success-message {
+  color: #27ae60;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+.payroll-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e1e8ed;
+}
+
+.payroll-header h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+
+.payroll-section {
+  margin-bottom: 25px;
+}
+
+.payroll-section h3 {
+  color: #34495e;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  border-left: 4px solid #667eea;
+  padding-left: 15px;
+}
+
+.payroll-actions {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #e1e8ed;
+}
+
+@media print {
+  body {
+    background: white !important;
+  }
+  
+  .container {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+  
+  .payroll-actions {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  .payroll-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .payroll-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .back-btn, .print-btn {
+    margin: 0;
+  }
+}
